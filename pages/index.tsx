@@ -1,10 +1,12 @@
 import Head from 'next/head'
 import Link from 'next/link'
 
+import { Layout } from '../components/layout/index'
+
 const stories = [{ pid: 'first' }, { pid: 'second' }, { pid: 'third' }]
 
 export const Home = (): JSX.Element => (
-  <div className="container">
+  <Layout>
     <Head>
       <title>Index</title>
       <link rel="icon" href="/favicon.ico" />
@@ -34,7 +36,7 @@ export const Home = (): JSX.Element => (
         ))}
       </ul>
     </main>
-  </div>
+  </Layout>
 )
 
 export default Home
